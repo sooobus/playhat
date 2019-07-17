@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Шляпа онлайн</title>
+  </head>
+
+  <body>
+    <h1>Игра в шляпу</h1>
+    <div id="app">
+      <hr>
+      <div v-if="gameStarted == true"> Ига началась!
+        <p>{{ words[wordCounter].word }}</p>
+        <button @click="buttonClicked">Угадано</button>
+        <p>Уже угадано: {{ wordCounter }}</p>
+      </div>
+      <p v-if="gameStarted == false"> Игра пока не началась.
+        <button @click="startGame">Начать игру</button>
+      </p>
+      <hr>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+          gameStarted: false,
+          wordCounter: 0,
+          words: [
+            { word: 'шляпа', complexity: 0.1 },
+            { word: 'силаэдр', complexity: 1.0 },
+            { word: 'код', complexity: 0.5 },
+          ]
+        },
+        methods: {
+          buttonClicked() {
+            if (this.wordCounter == this.words.length - 1){
+              this.gameStarted = false;
+            }
+            else {
+              this.wordCounter++;
+            }
+          },
+          startGame() {
+            this.wordCounter = 0;
+            this.gameStarted = true;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

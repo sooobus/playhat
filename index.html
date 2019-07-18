@@ -14,49 +14,35 @@
         <h1> Игра в шляпу </h1>
       </div>
       <div id="app">
-        <hr>
-        <div v-if="gameStarted == true"> Игра началась!
-          <p class='h2 pt-3 pb-3'>{{ words[wordCounter].word }}</p>
-          <button class="btn" @click="buttonClicked">Угадано</button>
-          <div class="bg-info">
-            <hr>
-            <p class='h4'>{{ wordCounter }}</p>
-            <hr>
-          </div>
-        </div>
-        <p v-if="gameStarted == false"> Игра пока не началась. </p>
-        <button class="btn" @click="startGame">Начать игру</button>
+        Hi
+        <hatgame > </hatgame>
       </div>
     </div>
+
+    <template id="hatgame-template">
+      <hr>
+      <p> {{words}}</p>
+      <div v-if="gameStarted == true"> Игра началась!
+        <p class='h2 pt-3 pb-3'>{{ words[wordCounter].word }}</p>
+        <button class="btn" @click="buttonClicked">Угадано</button>
+        <div class="bg-info">
+          <hr>
+          <p class='h4'>{{ wordCounter }}</p>
+          <hr>
+          <div class="block">
+            <p class="digit">{{ secondsLeft }}</p>
+            <p class="text">Seconds</p>
+          </div>
+        </div>
+      </div>
+    <div v-if="gameStarted == false">
+      <p> Игра пока не началась. </p>
+      <button class="btn" @click="startGame">Начать игру</button>
+    </div>
+  </template>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-    const app = new Vue({
-        el: '#app',
-        data: {
-          gameStarted: false,
-          wordCounter: 0,
-          words: [
-            { word: 'шляпа', complexity: 0.1 },
-            { word: 'силаэдр', complexity: 1.0 },
-            { word: 'код', complexity: 0.5 },
-          ]
-        },
-        methods: {
-          buttonClicked() {
-            if (this.wordCounter == this.words.length - 1){
-              this.gameStarted = false;
-            }
-            else {
-              this.wordCounter++;
-            }
-          },
-          startGame() {
-            this.wordCounter = 0;
-            this.gameStarted = true;
-          }
-        }
-      });
-    </script>
+    <script  src="./script.js"></script>
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

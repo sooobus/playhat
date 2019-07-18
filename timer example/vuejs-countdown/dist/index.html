@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vuejs countdown</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+
+  <!-- 2018-03-02 23:59:00 -->
+<!-- "Y-m-d H:i:s" -->
+<div id="app">
+  <countdown v-bind:interval="Math.trunc(new Date().getTime() / 1000) + 12"></countdown>
+</div>
+
+
+<template id="countdown-template">
+  <div class="countdown">
+    <div class="block">
+      <p class="digit">{{ seconds }}</p>
+      <p class="text">Seconds</p>
+      <p v-if="finished == false" class="text"> Not finished </p>
+    </div>
+  </div>
+</template>
+  <script src='https://unpkg.com/vue'></script>
+
+
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>

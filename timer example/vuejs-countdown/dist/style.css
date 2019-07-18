@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100);
+#app {
+  align-items: center;
+  bottom: 0;
+  background-color: #34495e;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.countdown {
+  display: flex;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.text {
+  color: #1abc9c;
+  font-size: 25px;
+  font-family: 'Roboto Condensed', serif;
+  font-weight: 40;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.digit {
+  color: #ecf0f1;
+  font-size: 130px;
+  font-weight: 100;
+  font-family: 'Roboto', serif;
+  margin: 10px;
+  text-align: center;
+}

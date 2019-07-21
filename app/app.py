@@ -15,6 +15,8 @@ class CustomFlask(Flask):
 
 app = CustomFlask(__name__)
 
+words = ['слова', 'из', 'фласка']
+
 @app.route('/')
-def hello_world():
-    return render_template('index.html')
+def play_hat():
+    return render_template('index.html', words=words)

@@ -17,19 +17,19 @@
   </div>
 
   <div class="container" id="app">
-    <hatgame v-bind:interval="12"></hatgame>
+    <hatgame :words="(( words ))" :interval="15"></hatgame>
   </div>
-
 
 <template id="countdown-template">
   <div class="hatgame">
     <div v-if="gameStarted == true"> Игра началась!
       <div class="block">
+
+
         <p class="h2 pt-3 pb-3 digit">{{ seconds }}</p>
-        <p v-if="finished == false" class="text"> Not finished </p>
       </div>
 
-      <p class='h2 pt-3 pb-3'>{{ words[wordCounter].word }}</p>
+      <p class='h2 pt-3 pb-3'>{{ words[wordCounter] }}</p>
       <button class="btn" @click="buttonClicked">Угадано</button>
       <div class="bg-info">
         <hr>
@@ -46,7 +46,7 @@
   </template>
 
   <script src='https://unpkg.com/vue'></script>
-  <script  src="../static/js/newscript.js"></script>
+  <script  src="../static/js/script.js"></script>
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

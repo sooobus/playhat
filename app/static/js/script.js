@@ -9,6 +9,12 @@ Vue.component('hatgame', {
     }
   },
 
+  created() {
+    window.setInterval(() => {
+      this.now = Math.trunc(new Date().getTime() / 1000);
+    }, 1000);
+  },
+
   data() {
     return {
       now: Math.trunc(new Date().getTime() / 1000),
@@ -39,9 +45,6 @@ Vue.component('hatgame', {
     startGame() {
       this.wordCounter = 0;
       this.gameStarted = true;
-      window.setInterval(() => {
-        this.now = Math.trunc(new Date().getTime() / 1000);
-      }, 1000);
       this.secondsLeft = this.now + this.interval;
     },
     finishGame() {

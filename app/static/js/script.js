@@ -21,6 +21,7 @@ Vue.component('hatgame', {
       gameStarted: false,
       wordCounter: 0,
       secondsLeft: 0,
+      totalWordCounter: 0,
     };
   },
   computed: {
@@ -40,6 +41,7 @@ Vue.component('hatgame', {
         this.finishGame();
       } else {
         this.wordCounter++;
+        this.totalWordCounter++;
       }
     },
     startGame() {

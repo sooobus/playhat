@@ -44,8 +44,8 @@ Vue.component('hatgame', {
         this.totalWordCounter++;
       }
     },
-    playSound (sound) {
-      if(sound) {
+    playSound(sound) {
+      if (sound) {
         var audio = new Audio(sound);
         audio.play();
       }

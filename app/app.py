@@ -20,4 +20,4 @@ word_gen = Words("model/word_lists/onegin.csv")
 
 @app.route('/')
 def play_hat():
-    return render_template('index.html', words=word_gen.get_random(500))
+    return render_template('index.html', words=word_gen.get_random(500), words_num=word_gen.size())

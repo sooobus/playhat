@@ -1,19 +1,32 @@
 body {
+  font-family: 'Caveat', cursive;
   background-color: #D9D8D7;
+  font-size: 140%;
 }
 
-.float-right {
-    color: #8C7561;
+a {
+    color: #8A8C80;
+}
+
+a:hover {
+    color: #8A8C80;
+}
+
+hr {
+  border: 3;
+  width: 80%;
+  color: #3E4035;
 }
 
 .container-fluid {
-    border: 0px;
-    background-color: #3E4035;
-    color: #D9D8D7;
+    background-color: transparent;
+    color: #3E4035;
+    border-width: 0px;
 }
 
-.text-seclink {
-    color: #8A8C80;
+.btn {
+    background-color: #3E4035;
+    color: #D9D8D7;
 }
 
 /* Color Theme Swatches in Hex */

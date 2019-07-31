@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Caveat|Gabriela|Neucha|Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     <title>Шляпа онлайн</title>
   </head>
@@ -28,7 +26,7 @@
           </div>
           <p class='h2 pt-2 pb-4'>{{ words[totalWordCounter] }}</p>
           <button class="btn" @click="buttonClicked">Угадано</button>
-          <div class="container-fluid pt-4 pb-2">
+          <div class="container-fluid pt-4 pb-1">
             <p class='h2'>{{ wordCounter }}</p>
           </div>
         </div>
@@ -43,8 +41,11 @@
     <footer class="page-footer w-75">
       <div>
         <br>
-        <p class="float-right small">Сейчас на сайте (( words_num )) слов из "Евгения Онегина" |
-          <a href="https://forms.gle/7gZe4U3mjdvXhgMz7" target="_blank">Предложить слова</a>
+        <p class="float-right small">
+          Сейчас на сайте (( words_num )) слов из "Евгения Онегина" |
+          <a href="https://forms.gle/7gZe4U3mjdvXhgMz7" target="_blank">Предложить слова</a> |
+          <a href="https://t.me/playhat_ru" target="_blank">Telegram-канал</a>
+
         </p>
       </div>
     </footer>

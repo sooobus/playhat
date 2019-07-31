@@ -44,12 +44,19 @@ Vue.component('hatgame', {
         this.totalWordCounter++;
       }
     },
+    playSound (sound) {
+      if(sound) {
+        var audio = new Audio(sound);
+        audio.play();
+      }
+    },
     startGame() {
       this.wordCounter = 0;
       this.gameStarted = true;
       this.secondsLeft = this.now + this.interval;
     },
     finishGame() {
+      this.playSound('../static/sound/bell.mp3');
       this.gameStarted = false;
     }
   }

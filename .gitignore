@@ -2,3 +2,4 @@ venv/
 __pycache__/
 app/model/word_lists
 corpora/
+.idea/

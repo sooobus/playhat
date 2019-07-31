@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     <title>Шляпа онлайн</title>
   </head>
   <body class="text-center">
@@ -20,11 +21,11 @@
         <div v-if="gameStarted == true">
           Игра началась!
           <div class="block">
-            <p class="h2 pt-3 pb-3 digit">{{ seconds }}</p>
+            <p class="h2 pt-3 pb-2 digit">{{ seconds }}</p>
           </div>
-          <p class='h2 pt-3 pb-3'>{{ words[totalWordCounter] }}</p>
+          <p class='h2 pt-2 pb-4'>{{ words[totalWordCounter] }}</p>
           <button class="btn" @click="buttonClicked">Угадано</button>
-          <div class="bg-info">
+          <div class="container-fluid">
             <hr>
             <p class='h4'>{{ wordCounter }}</p>
             <hr>
@@ -38,13 +39,11 @@
       </div>
     </template>
     <hr>
-    <div class="container" id="app2">
-    </div>
     <!-- Footer -->
     <footer class="page-footer w-75">
       <div>
         <p class="float-right">
-          <a href="https://forms.gle/7gZe4U3mjdvXhgMz7" target="_blank">Предложить слова</a>
+          <a class="text-seclink" href="https://forms.gle/7gZe4U3mjdvXhgMz7" target="_blank">Предложить слова</a>
         </p>
       </div>
     </footer>

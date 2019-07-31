@@ -1,0 +1,25 @@
+body {
+  background-color: #D9D8D7;
+}
+
+.float-right {
+    color: #8C7561;
+}
+
+.container-fluid {
+    border: 0px;
+    background-color: #3E4035;
+    color: #D9D8D7;
+}
+
+.text-seclink {
+    color: #8A8C80;
+}
+
+/* Color Theme Swatches in Hex */
+/*.Illustration-1-hex { color: #8A8C80; }
+.Illustration-2-hex { color: #3E4035; }
+.Illustration-3-hex { color: #F2F2F0; }
+.Illustration-4-hex { color: #D9D8D7; }
+.Illustration-5-hex { color: #8C7561; }
+*/

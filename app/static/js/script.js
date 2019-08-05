@@ -13,6 +13,11 @@ Vue.component('hatgame', {
     window.setInterval(() => {
       this.now = Math.trunc(new Date().getTime() / 1000);
     }, 1000);
+    window.addEventListener('keydown', (e) => {
+      if (this.gameStarted == true) {
+        this.recordGuessed();
+      }
+    });
   },
 
   data() {
@@ -36,7 +41,7 @@ Vue.component('hatgame', {
   },
 
   methods: {
-    buttonClicked() {
+    recordGuessed() {
       if (this.wordCounter == this.words.length - 1) {
         this.finishGame();
       } else {

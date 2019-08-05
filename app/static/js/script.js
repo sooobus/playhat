@@ -58,6 +58,16 @@ Vue.component('hatgame', {
     finishGame() {
       this.playSound('../static/sound/bell.mp3');
       this.gameStarted = false;
+    },
+    getPointsCase(points) {
+      var modpoints = points % 100;
+      if (modpoints % 10 >= 2 && modpoints % 10 <= 4) {
+        return "очка";
+      } else if (modpoints % 10 == 1 && modpoints != 11) {
+        return "очко";
+      } else {
+        return "очков";
+      }
     }
   }
 });

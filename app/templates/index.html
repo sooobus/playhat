@@ -31,7 +31,7 @@
           </div>
         </div>
         <div v-if="gameStarted == false">
-          <p> В прошлый раз вы набрали {{wordCounter}} очков </p>
+          <p> В прошлый раз вы набрали {{wordCounter}} {{ getPointsCase(wordCounter) }} </p>
           <p> Игра пока не началась </p>
           <button class="btn" @click="startGame">Начать игру</button>
         </div>

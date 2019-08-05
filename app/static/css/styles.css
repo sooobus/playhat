@@ -27,8 +27,24 @@ hr {
 .btn {
     background-color: #3E4035;
     color: #D9D8D7;
+    font-size: larger;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
 }
 
+.btn-alert {
+    background-color: darkred;
+    color: #D9D8D7;
+    font-size: large;
+    text-align: center;
+    width: 60px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+}
 /* Color Theme Swatches in Hex */
 /*.Illustration-1-hex { color: #8A8C80; }
 .Illustration-2-hex { color: #3E4035; }
